@@ -12,8 +12,14 @@
     <header id="header">
         <div class="container">
             <nav>
-
+                <!-- Mobile menu toggle -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display:none;">
                 <div class="logo"><span class="tech-text">SENETHMI</span><span class="accent">_</span></div>
+                <label for="nav-toggle" class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
                 <ul class="nav-links"> 
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,14 +30,59 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
             </nav>
         </div>
     </header>
+    <style>
+    /* Responsive Navigation Styles */
+    
+    .nav-toggle {
+        display: none;
+    }
+    @media (max-width: 900px) {
+        .nav-links {
+            position: fixed;
+            top: 0;
+            right: -100vw;
+            width: 70vw;
+            height: 100vh;
+            background: #181a23;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 80px 32px 32px 32px;
+            gap: 28px;
+            box-shadow: -2px 0 16px rgba(0,0,0,0.18);
+            z-index: 1001;
+            transition: right 0.3s;
+        }
+        .nav-toggle:checked ~ .nav-links {
+            right: 0;
+        }
+        .hamburger {
+            display: flex;
+        }
+        /* Hamburger animation when open */
+        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        /* Hide nav-links in desktop */
+        .nav-links {
+            display: flex;
+        }
+    }
+    @media (max-width: 600px) {
+        .nav-links {
+            width: 90vw;
+            padding: 80px 16px 16px 16px;
+        }
+    }
+    </style>
 
     <!--Hero Section -->
     <section id="hero">

@@ -93,10 +93,10 @@
                     <h1>I'm <span class="accent">Senethmi Wickramanayake</span></h1>
                     <h2>Computer Science & Mechatronics Engineering Undergraduate</h2>
                     <p>Bridging the gap between software logic and hardware implementation through innovative automation solutions.</p>
-                    <div class="hero-buttons">
+                    <div class="hero-buttons" style="flex-wrap: wrap; gap: 10px;">
                         <a href="#projects" class="btn">View Projects</a>
                         <a href="#contact" class="btn-outline">Contact Me</a>
-                        <a href="cv.pdf" class="btn" style="margin-left:10px;" download>Download CV</a>
+                        <a href="cv.pdf" class="btn" download>Download CV</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -107,6 +107,25 @@
                 </div>
             </div>
         </div>
+        <style>
+        /* Responsive hero buttons */
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        @media (max-width: 600px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-buttons .btn,
+            .hero-buttons .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        </style>
     </section>
 
     <!-- About Section -->

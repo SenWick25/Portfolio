@@ -228,30 +228,7 @@
         from { opacity: 0; transform: translateY(40px);}
         to { opacity: 1; transform: translateY(0);}
     }
-    #extracurricular::before {
-        content: '';
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        width: 80px;
-        height: 80px;
-        background: radial-gradient(circle, #4f8cff33 60%, transparent 100%);
-        border-radius: 50%;
-        z-index: 0;
-        animation: floatDot 6s infinite alternate;
-    }
-    #extracurricular::after {
-        content: '';
-        position: absolute;
-        bottom: 8%;
-        right: 8%;
-        width: 60px;
-        height: 60px;
-        background: radial-gradient(circle, #22223b22 60%, transparent 100%);
-        border-radius: 50%;
-        z-index: 0;
-        animation: floatDot2 7s infinite alternate;
-    }
+    /* Removed #extracurricular::before and #extracurricular::after background dots */
     @keyframes floatDot {
         0% { transform: translateY(0);}
         100% { transform: translateY(30px);}
@@ -522,7 +499,18 @@
                     <p>I'm currently looking for internship opportunities in automation and systems analysis. I'm also open to collaborations, teaming up for projects, competitions, business ideas, or even helping you develop simple tech solutions for your small businesses or innovative concepts. Feel free to reach out.I'd love to connect!</p>
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p>senwickramanayake25@gmail.com</p></div></div>
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div><h4>Phone</h4><p>+94 71 714 4188</p></div></div>
-                    <div class="contact-item"><div class="contact-icon"><i class="fab fa-linkedin"></i></div><div><h4>LinkedIn</h4><p>linkedin.com/in/senethmi-wickramanayake</p></div></div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>
+                                <a href="https://www.linkedin.com/in/senethmi-wickramanayake-800b3029b" target="_blank">
+                                    linkedin.com/in/senethmi-wickramanayake-800b3029b
+                                </a>
+                            </p>
+                        </div>
+                    </div></a>
+                    <div class="contact-item"><div class="contact-icon"><i class="fab fa-github"></i></div><div><h4>GitHub</h4><p><a href="https://github.com/SenWick25" target="_blank">github.com/SenWick25</a></p></div></div>
                 </div>
             </div>
         </div>
@@ -536,6 +524,7 @@
                     <a href="https://www.facebook.com/dineth.wicki" class="social-link"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.linkedin.com/in/senethmi-wickramanayake-800b3029b" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/your_instagram_profile" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/SenWick25" class="social-link"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="copyright">
                     <p>&copy; 2024 Senethmi Wickramanayake. All systems operational.</p>

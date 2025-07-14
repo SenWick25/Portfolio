@@ -54,26 +54,24 @@
             box-shadow: -2px 0 16px rgba(0,0,0,0.18);
             z-index: 1001;
             transition: right 0.3s;
+            display: flex;
         }
-        .nav-toggle:checked ~ .nav-links {
+        /* Fix: Use general sibling selector for nav-toggle and nav-links */
+        #nav-toggle:checked ~ .nav-links {
             right: 0;
         }
         .hamburger {
             display: flex;
         }
         /* Hamburger animation when open */
-        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(1) {
+        #nav-toggle:checked ~ .logo + .hamburger .bar:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
         }
-        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(2) {
+        #nav-toggle:checked ~ .logo + .hamburger .bar:nth-child(2) {
             opacity: 0;
         }
-        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(3) {
+        #nav-toggle:checked ~ .logo + .hamburger .bar:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
-        }
-        /* Hide nav-links in desktop */
-        .nav-links {
-            display: flex;
         }
     }
     @media (max-width: 600px) {

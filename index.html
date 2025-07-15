@@ -34,8 +34,8 @@
         </div>
     </header>
     <style>
+
     /* Responsive Navigation Styles */
-    
     .nav-toggle {
         display: none;
     }
@@ -54,24 +54,27 @@
             box-shadow: -2px 0 16px rgba(0,0,0,0.18);
             z-index: 1001;
             transition: right 0.3s;
-            display: flex;
         }
-        /* Fix: Use general sibling selector for nav-toggle and nav-links */
-        #nav-toggle:checked ~ .nav-links {
+        .nav-toggle:checked ~ .nav-links {
             right: 0;
         }
         .hamburger {
             display: flex;
         }
-        /* Hamburger animation when open */
-        #nav-toggle:checked ~ .logo + .hamburger .bar:nth-child(1) {
+        
+
+        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
         }
-        #nav-toggle:checked ~ .logo + .hamburger .bar:nth-child(2) {
+        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(2) {
             opacity: 0;
         }
-        #nav-toggle:checked ~ .logo + .hamburger .bar:nth-child(3) {
+        .nav-toggle:checked + .logo + .hamburger .bar:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
+        }
+        
+        .nav-links {
+            display: flex;
         }
     }
     @media (max-width: 600px) {
@@ -91,7 +94,7 @@
                     <h1>I'm <span class="accent">Senethmi Wickramanayake</span></h1>
                     <h2>Computer Science & Mechatronics Engineering Undergraduate</h2>
                     <p>Bridging the gap between software logic and hardware implementation through innovative automation solutions.</p>
-                    <div class="hero-buttons">
+                    <div class="hero-buttons" style="flex-wrap: wrap; gap: 10px;">
                         <a href="#projects" class="btn">View Projects</a>
                         <a href="#contact" class="btn-outline">Contact Me</a>
                         <a href="cv.pdf" class="btn" download>Download CV</a>
@@ -106,7 +109,8 @@
             </div>
         </div>
         <style>
-        /* Responsive hero buttons */
+
+    
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -233,7 +237,7 @@
         </div>
     </section>
     <style>
-    /* Extracurricular Section - Unified Theme */
+   
     #extracurricular {
         background: linear-gradient(120deg, #181a23 60%, #23233a 100%);
         padding: 60px 0 40px 0;
@@ -296,17 +300,9 @@
         from { opacity: 0; transform: translateY(40px);}
         to { opacity: 1; transform: translateY(0);}
     }
-    /* Removed #extracurricular::before and #extracurricular::after background dots */
-    @keyframes floatDot {
-        0% { transform: translateY(0);}
-        100% { transform: translateY(30px);}
-    }
-    @keyframes floatDot2 {
-        0% { transform: translateY(0);}
-        100% { transform: translateY(-20px);}
-    }
+ 
 
-    /* Academic Background Section - Theme Updated */
+    /* Academic Background Section */
     #academic-background {
         background: linear-gradient(120deg, #181a23 60%, #23233a 100%);
         padding: 60px 0 40px 0;
